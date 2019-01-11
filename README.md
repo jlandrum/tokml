@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/mapbox/tokml.png)](https://travis-ci.org/mapbox/tokml) [![Coverage Status](https://coveralls.io/repos/mapbox/tokml/badge.png)](https://coveralls.io/r/mapbox/tokml)
+Forked from https://github.com/mapbox/tokml
 
 # tokml
 
@@ -8,15 +8,15 @@ Convert [GeoJSON](http://geojson.org/) to [KML](https://developers.google.com/km
 
 with node/browserify
 
-    npm install --save tokml
+    npm install --save @maphubs/tokml
 
 otherwise:
 
-    wget https://raw.github.com/mapbox/tokml/master/tokml.js
+    wget https://raw.github.com/maphubs/tokml/master/tokml.js
 
 as a binary:
 
-    npm install -g tokml
+    npm install -g @maphubs/tokml
     tokml file.geojson > file.kml
     tokml < file.geojson > file.kml
 
