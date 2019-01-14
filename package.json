@@ -1,6 +1,6 @@
 {
   "name": "@maphubs/tokml",
-  "version": "0.5.1",
+  "version": "0.5.2",
   "description": "convert geojson to kml",
   "main": "index.js",
   "scripts": {

@@ -1,4 +1,4 @@
-## 0.5.1
+## 0.5.2
 
 * Add support for placemark ID attributes https://github.com/mapbox/tokml/issues/39
 
