@@ -9,7 +9,6 @@ module.exports = function tokml(geojson, options) {
         documentDescription: undefined,
         name: 'name',
         description: 'description',
-        id: 'id',
         simplestyle: false,
         timestamp: 'timestamp'
     };
@@ -51,9 +50,9 @@ function feature(options, styleHashesArray) {
                 // Note that style of GeometryCollection / MultiGeometry is not supported
             }
         }
-        var id = _.properties[options.id]
+  
         var attributes = {}
-        if (id) attributes.id = id
+        if (_.id) attributes.id = _.id
         return styleDefinition + tag('Placemark',
             attributes,
             name(_.properties, options) +
