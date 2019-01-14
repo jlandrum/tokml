@@ -61,6 +61,11 @@ test('tokml', function(t) {
         tt.end();
     });
 
+    t.test('id attribute', function(tt) {
+        geq(tt, 'id');
+        tt.end();
+    });
+
     t.test('name & description', function(tt) {
         geq(tt, 'name_desc');
         geq(tt, 'document_name_desc', {
