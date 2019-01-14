@@ -1,3 +1,11 @@
+## 0.5.1
+
+* Add support for placemark ID attributes https://github.com/mapbox/tokml/issues/39
+
+## 0.5.0
+
+* Upgrade dependencies to resolve security audit warnings
+
 ## 0.4.0
 
 * Adds support for simplestyle-spec. Thanks [Vincent Sels!](https://github.com/vincentsels)
