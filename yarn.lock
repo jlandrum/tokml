@@ -1005,11 +1005,6 @@ core-util-is@1.0.2, core-util-is@~1.0.0:
   resolved "https://registry.yarnpkg.com/core-util-is/-/core-util-is-1.0.2.tgz#b5fd54220aa2bc5ab57aab7140c940754503c1a7"
   integrity sha1-tf1UIgqivFq1eqtxQMlAdUUDwac=
 
-corslite@0.0.7:
-  version "0.0.7"
-  resolved "https://registry.yarnpkg.com/corslite/-/corslite-0.0.7.tgz#8e451db5320a7556de1ef78d9bd3566343077721"
-  integrity sha1-jkUdtTIKdVbeHveNm9NWY0MHdyE=
-
 coveralls@^3.0.11, coveralls@^3.1.0:
   version "3.1.0"
   resolved "https://registry.yarnpkg.com/coveralls/-/coveralls-3.1.0.tgz#13c754d5e7a2dd8b44fe5269e21ca394fb4d615b"
@@ -3230,12 +3225,6 @@ strip-bom@^4.0.0:
   resolved "https://registry.yarnpkg.com/strip-bom/-/strip-bom-4.0.0.tgz#9c3505c1db45bcedca3d9cf7a16f5c5aa3901878"
   integrity sha512-3xurFv5tEgii33Zi8Jtp55wEIILR9eh34FAW00PZf+JnSsTmV/ioewSgQl97JHvgjoRGwPShsWm+IdrxB35d0w==
 
-strxml@mapbox/strxml:
-  version "1.0.0"
-  resolved "https://codeload.github.com/mapbox/strxml/tar.gz/4325a5597621600183b869452da6104f8d2215b8"
-  dependencies:
-    xml-escape "1.1.0"
-
 subarg@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/subarg/-/subarg-1.0.0.tgz#f62cf17581e996b48fc965699f54c06ae268b8d2"
@@ -3660,11 +3649,6 @@ write-file-atomic@^3.0.0, write-file-atomic@^3.0.1:
     is-typedarray "^1.0.0"
     signal-exit "^3.0.2"
     typedarray-to-buffer "^3.1.5"
-
-xml-escape@1.1.0, xml-escape@^1.1.0:
-  version "1.1.0"
-  resolved "https://registry.yarnpkg.com/xml-escape/-/xml-escape-1.1.0.tgz#3904c143fa8eb3a0030ec646d2902a2f1b706c44"
-  integrity sha1-OQTBQ/qOs6ADDsZG0pAqLxtwbEQ=
 
 xtend@^4.0.0, xtend@^4.0.1, xtend@^4.0.2, xtend@~4.0.1:
   version "4.0.2"
