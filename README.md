@@ -30,14 +30,14 @@ var kml = tokml(geojsonObject);
 // grab name and description properties from each object and write them in
 // KML
 var kmlNameDescription = tokml(geojsonObject, {
-    name: 'name',
-    description: 'description'
+  name: "name",
+  description: "description",
 });
 
 // name and describe the KML document as a whole
 var kmlDocumentName = tokml(geojsonObject, {
-    documentName: 'My List Of Markers',
-    documentDescription: "One of the many places you are not I am"
+  documentName: "My List Of Markers",
+  documentDescription: "One of the many places you are not I am",
 });
 ```
 
@@ -55,26 +55,26 @@ string of XML.
 properties that are often styled and displayed automatically. These options let
 you define a mapping from the GeoJSON style to KML's.
 
-* `name`: the name of the property in each GeoJSON Feature that contains
+- `name`: the name of the property in each GeoJSON Feature that contains
   the feature's name
-* `description`: the name of the property in each GeoJSON Feature that contains
+- `description`: the name of the property in each GeoJSON Feature that contains
   the feature's description
 
-**Timestamp:** KML can associate features with a moment in time via the `TimeStamp` tag.  GeoJSON doesn't
+**Timestamp:** KML can associate features with a moment in time via the `TimeStamp` tag. GeoJSON doesn't
 have a comparable field, but a custom property can be mapped
 
-* `timestamp`: the name of the property in each GeoJSON Feature that contains 
-  a timestamp in XML Schema Time (yyyy-mm-ddThh:mm:sszzzzzz)  
+- `timestamp`: the name of the property in each GeoJSON Feature that contains
+  a timestamp in XML Schema Time (yyyy-mm-ddThh:mm:sszzzzzz)
 
 **Document name and description**: KML supports `name` and `description` properties
 for the full document.
 
-* `documentName`: the name of the full document
-* `documentDescription`: the description of the full document
+- `documentName`: the name of the full document
+- `documentDescription`: the description of the full document
 
 **[simplestyle-spec](https://github.com/mapbox/simplestyle-spec)** support:
 
-* `simplestyle`: set to `true` to convert simplestyle-spec styles into KML styles
+- `simplestyle`: set to `true` to convert simplestyle-spec styles into KML styles
 
 ## Development
 
@@ -86,5 +86,5 @@ To build `tokml.js`:
 
 To run tests:
 
-    npm install
-    npm test
+    yarn install
+    yarn run test
