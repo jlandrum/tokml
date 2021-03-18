@@ -44,6 +44,7 @@ function feature(options, styleHashesArray) {
             styleHashesArray.push(styleHash)
           }
           styleReference = tag('styleUrl', '#' + styleHash)
+          removeMarkerStyle(_.properties)
         } else if (
           (geometry.isPolygon(_.geometry) || geometry.isLine(_.geometry)) &&
           hasPolygonAndLineStyle(_.properties)
@@ -53,6 +54,7 @@ function feature(options, styleHashesArray) {
             styleHashesArray.push(styleHash)
           }
           styleReference = tag('styleUrl', '#' + styleHash)
+          removePolygonAndLineStyle(_.properties)
         }
         // Note that style of GeometryCollection / MultiGeometry is not supported
       }
@@ -242,6 +244,13 @@ function hasMarkerStyle(_) {
   return !!(_['marker-size'] || _['marker-symbol'] || _['marker-color'])
 }
 
+function removeMarkerStyle(_) {
+  delete _['marker-size']
+  delete _['marker-symbol']
+  delete _['marker-color']
+  delete _['marker-shape']
+}
+
 function markerStyle(_, styleHash) {
   return tag(
     'Style',
@@ -293,6 +302,14 @@ function hasPolygonAndLineStyle(_) {
     )
       return true
   }
+}
+
+function removePolygonAndLineStyle(_) {
+  delete _['stroke']
+  delete _['stroke-opacity']
+  delete _['stroke-width']
+  delete _['fill']
+  delete _['fill-opacity']
 }
 
 function polygonAndLineStyle(_, styleHash) {
