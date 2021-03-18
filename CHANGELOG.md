@@ -1,3 +1,9 @@
+## 0.6.0
+
+- Fix #2 setting the `simplestyle` option will now exclude the options from the `<ExtendedData>` of the KML
+- Upgrade dependencies
+- Simplify dependencies by removing unused website and moving helper functions into this repo
+
 ## 0.5.2
 
 - Add support for placemark ID attributes https://github.com/mapbox/tokml/issues/39
