@@ -62,7 +62,7 @@ function feature(options, styleHashesArray) {
     }
 
     var attributes = {}
-    if (_.id) attributes.id = _.id
+    if (_.id) attributes.id = _.id.toString();
     return (
       styleDefinition +
       tag(
@@ -403,28 +403,29 @@ function pairs(_) {
 }
 
 },{"./lib/strxml":2,"./lib/xml-escape":3}],2:[function(require,module,exports){
+/* istanbul ignore file */
 // strxml from https://github.com/mapbox/strxml
 
-var esc = require("./xml-escape");
+var esc = require('./xml-escape')
 
-module.exports.attr = attr;
-module.exports.tagClose = tagClose;
-module.exports.tag = tag;
+module.exports.attr = attr
+module.exports.tagClose = tagClose
+module.exports.tag = tag
 
 /**
  * @param {array} _ an array of attributes
  * @returns {string}
  */
 function attr(attributes) {
-  if (!Object.keys(attributes).length) return "";
+  if (!Object.keys(attributes).length) return ''
   return (
-    " " +
+    ' ' +
     Object.keys(attributes)
       .map(function (key) {
-        return key + '="' + esc(attributes[key]) + '"';
+        return key + '="' + esc(attributes[key]) + '"'
       })
-      .join(" ")
-  );
+      .join(' ')
+  )
 }
 
 /**
@@ -433,7 +434,7 @@ function attr(attributes) {
  * @returns {string}
  */
 function tagClose(el, attributes) {
-  return "<" + el + attr(attributes) + "/>";
+  return '<' + el + attr(attributes) + '/>'
 }
 
 /**
@@ -443,45 +444,46 @@ function tagClose(el, attributes) {
  * @returns {string}
  */
 function tag(el, attributes, contents) {
-  if (Array.isArray(attributes) || typeof attributes === "string") {
-    contents = attributes;
-    attributes = {};
+  if (Array.isArray(attributes) || typeof attributes === 'string') {
+    contents = attributes
+    attributes = {}
   }
   if (Array.isArray(contents))
     contents =
-      "\n" +
+      '\n' +
       contents
         .map(function (content) {
-          return "  " + content;
+          return '  ' + content
         })
-        .join("\n") +
-      "\n";
-  return "<" + el + attr(attributes) + ">" + contents + "</" + el + ">";
+        .join('\n') +
+      '\n'
+  return '<' + el + attr(attributes) + '>' + contents + '</' + el + '>'
 }
 
 },{"./xml-escape":3}],3:[function(require,module,exports){
+/* istanbul ignore file */
 // originally from https://github.com/miketheprogrammer/xml-escape
 
 var escape = (module.exports = function escape(string, ignore) {
-  var pattern;
+  var pattern
 
-  if (string === null || string === undefined) return;
+  if (string === null || string === undefined) return
 
-  ignore = (ignore || "").replace(/[^&"<>\']/g, "");
-  pattern = "([&\"<>'])".replace(new RegExp("[" + ignore + "]", "g"), "");
+  ignore = (ignore || '').replace(/[^&"<>\']/g, '')
+  pattern = '([&"<>\'])'.replace(new RegExp('[' + ignore + ']', 'g'), '')
 
-  return string.replace(new RegExp(pattern, "g"), function (str, item) {
-    return escape.map[item];
-  });
-});
+  return string.replace(new RegExp(pattern, 'g'), function (str, item) {
+    return escape.map[item]
+  })
+})
 
 var map = (escape.map = {
-  ">": "&gt;",
-  "<": "&lt;",
-  "'": "&apos;",
-  '"': "&quot;",
-  "&": "&amp;",
-});
+  '>': '&gt;',
+  '<': '&lt;',
+  "'": '&apos;',
+  '"': '&quot;',
+  '&': '&amp;'
+})
 
 },{}]},{},[1])(1)
 });

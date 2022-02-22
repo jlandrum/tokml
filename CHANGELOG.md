@@ -1,3 +1,8 @@
+## 0.6.1
+
+- Fix #4 error with non-string id values
+- Upgrade dev dependencies to fix tests and pass code coverage check
+
 ## 0.6.0
 
 - Fix #2 setting the `simplestyle` option will now exclude the options from the `<ExtendedData>` of the KML
