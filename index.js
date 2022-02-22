@@ -61,7 +61,7 @@ function feature(options, styleHashesArray) {
     }
 
     var attributes = {}
-    if (_.id) attributes.id = _.id
+    if (_.id) attributes.id = _.id.toString();
     return (
       styleDefinition +
       tag(
